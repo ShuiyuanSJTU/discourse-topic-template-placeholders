@@ -3,7 +3,7 @@ import discourseComputed from "discourse/lib/decorators";
 import { i18n } from "discourse-i18n";
 
 export default apiInitializer("1.8.0", (api) => {
-  const site = api.container.lookup("site:main");
+  const site = api.container.lookup("service:site");
 
   // Extend D-Editor component to handle topic template placeholders
   api.modifyClass(
